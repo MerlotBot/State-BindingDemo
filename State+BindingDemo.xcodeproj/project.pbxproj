@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BB25359B22BFD4C800F03529 /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB25359A22BFD4C800F03529 /* Episode.swift */; };
+		BB25359D22BFD75400F03529 /* FancyTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB25359C22BFD75300F03529 /* FancyTimer.swift */; };
 		BBB7E58822BFC2CD00EFD030 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB7E58722BFC2CD00EFD030 /* AppDelegate.swift */; };
 		BBB7E58A22BFC2CD00EFD030 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB7E58922BFC2CD00EFD030 /* SceneDelegate.swift */; };
 		BBB7E58C22BFC2CD00EFD030 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB7E58B22BFC2CD00EFD030 /* ContentView.swift */; };
@@ -17,7 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BB25359A22BFD4C800F03529 /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
+		BB25359C22BFD75300F03529 /* FancyTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FancyTimer.swift; sourceTree = "<group>"; };
 		BBB7E58422BFC2CD00EFD030 /* State+BindingDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "State+BindingDemo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBB7E58722BFC2CD00EFD030 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BBB7E58922BFC2CD00EFD030 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,7 +58,6 @@
 		BBB7E58622BFC2CD00EFD030 /* State+BindingDemo */ = {
 			isa = PBXGroup;
 			children = (
-				BBB7E59D22BFC4AE00EFD030 /* Models */,
 				BBB7E58722BFC2CD00EFD030 /* AppDelegate.swift */,
 				BBB7E58922BFC2CD00EFD030 /* SceneDelegate.swift */,
 				BBB7E58B22BFC2CD00EFD030 /* ContentView.swift */,
@@ -66,6 +65,7 @@
 				BBB7E59222BFC2CF00EFD030 /* LaunchScreen.storyboard */,
 				BBB7E59522BFC2CF00EFD030 /* Info.plist */,
 				BBB7E58F22BFC2CF00EFD030 /* Preview Content */,
+				BB25359C22BFD75300F03529 /* FancyTimer.swift */,
 			);
 			path = "State+BindingDemo";
 			sourceTree = "<group>";
@@ -76,14 +76,6 @@
 				BBB7E59022BFC2CF00EFD030 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		BBB7E59D22BFC4AE00EFD030 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				BB25359A22BFD4C800F03529 /* Episode.swift */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,8 +149,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB25359D22BFD75400F03529 /* FancyTimer.swift in Sources */,
 				BBB7E58822BFC2CD00EFD030 /* AppDelegate.swift in Sources */,
-				BB25359B22BFD4C800F03529 /* Episode.swift in Sources */,
 				BBB7E58A22BFC2CD00EFD030 /* SceneDelegate.swift in Sources */,
 				BBB7E58C22BFC2CD00EFD030 /* ContentView.swift in Sources */,
 			);
