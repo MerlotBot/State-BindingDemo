@@ -29,7 +29,9 @@ struct ContentView : View {
                     Image(dish.imageURL)
                         .resizable()
                         .frame(width: 100, height:100)
-                    
+                    .clipShape(Circle())
+                        .shadow(radius: 6)
+
                     Text(dish.name)
                         .font(.title)
                         .lineLimit(nil)
