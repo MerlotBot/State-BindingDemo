@@ -10,19 +10,38 @@ import SwiftUI
 
 struct ContentView : View {
     
-    @State var tasks = [Task]()
+    var model = Dish.all()
     
-    private func addTask() {
-        self.tasks.append(Task(name: "Wash the car"))
-    }
+    @State private var isSpicy = false
     
     var body: some View {
+        
         List {
-            Button(action: addTask) {
-                Text("Add Task")
+            
+            Toggle(isOn: $isSpicy) {
+                Text("Spicy")
+                .font(.title)
             }
-            ForEach(tasks) { task in
-                Text(task.name)
+            
+            ForEach(model.filter { $0.isSpicy == self.isSpicy }) { dish in
+                
+                HStack {
+                    Image(dish.imageURL)
+                        .resizable()
+                        .frame(width: 100, height:100)
+                    
+                    Text(dish.name)
+                        .font(.title)
+                        .lineLimit(nil)
+                    
+                    Spacer()
+                    
+                    if(dish.isSpicy) {
+                        Image("spicy-icon")
+                            .resizable()
+                            .frame(width: 35, height: 35)
+                    }
+                }
             }
         }
     }
