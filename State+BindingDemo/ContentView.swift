@@ -10,44 +10,27 @@ import SwiftUI
 
 struct ContentView : View {
     
-    var model = Dish.all()
+    @State var name: String = ""
     
-    @State private var isSpicy = false
+    private func printName() {
+        print(self.name)
+    }
     
     var body: some View {
         
-        List {
+        VStack {
+            Text(name)
+            TextField($name, placeholder: Text("Enter Text"))
+            .padding(12)
             
-            Toggle(isOn: $isSpicy) {
-                Text("Spicy")
-                .font(.title)
-            }
-            
-            ForEach(model.filter { $0.isSpicy == self.isSpicy }) { dish in
-                
-                HStack {
-                    Image(dish.imageURL)
-                        .resizable()
-                        .frame(width: 100, height:100)
-                    .clipShape(Circle())
-                        .shadow(radius: 6)
-
-                    Text(dish.name)
-                        .font(.title)
-                        .lineLimit(nil)
-                    
-                    Spacer()
-                    
-                    if(dish.isSpicy) {
-                        Image("spicy-icon")
-                            .resizable()
-                            .frame(width: 35, height: 35)
-                    }
-                }
+            Button(action: printName) {
+                Text("Show name value")
             }
         }
+    
     }
 }
+
 
 #if DEBUG
 struct ContentView_Previews : PreviewProvider {
