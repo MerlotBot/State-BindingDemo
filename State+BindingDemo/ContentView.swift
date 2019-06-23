@@ -10,26 +10,39 @@ import SwiftUI
 
 struct ContentView : View {
     
-    @State var name: String = ""
+    let episode = Episode(name: "Macbreak Weekly", track: "WWDC 2019")
     
-    private func printName() {
-        print(self.name)
-    }
+    @State private var isPlaying = false
     
     var body: some View {
         
         VStack {
-            Text(name)
-            TextField($name, placeholder: Text("Enter Text"))
-            .padding(12)
+            Text(self.episode.name)
+            .font(.title)
+                .foregroundColor(self.isPlaying ? .green : .black)
             
-            Button(action: printName) {
-                Text("Show name value")
-            }
+            Text(self.episode.track)
+            .foregroundColor(.secondary)
+            
+            PlayButton(isPlaying: $isPlaying)
         }
-    
     }
 }
+
+struct PlayButton: View {
+    
+    @Binding var isPlaying: Bool
+    
+    var body: some View {
+        Button(action: {
+            self.isPlaying.toggle()
+        }) {
+            Text("Play")
+        }.padding(12)
+    }
+    
+}
+
 
 
 #if DEBUG

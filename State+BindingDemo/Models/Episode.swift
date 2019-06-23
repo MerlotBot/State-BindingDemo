@@ -1,5 +1,5 @@
 //
-//  Task.swift
+//  Episode.swift
 //  State+BindingDemo
 //
 //  Created by Antonakakis Nikolaos on 23.06.19.
@@ -7,10 +7,9 @@
 //
 
 import Foundation
-import SwiftUI
 
-struct Task: Identifiable {
+struct Episode {
     
-    let id = UUID()
     let name: String
+    let track: String
 }
